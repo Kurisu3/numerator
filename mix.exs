@@ -4,10 +4,10 @@ defmodule Numerator.MixProject do
   def project do
     [
       app: :numerator,
-      version: "0.2.1",
-      elixir: "~> 1.7",
+      version: "0.2.2",
+      elixir: "~> 1.14",
       name: "Numerator",
-      source_url: "https://github.com/madeitGmbH/numerator",
+      source_url: "https://github.com/Kurisu3/numerator",
       description: description(),
       package: package(),
       start_permanent: Mix.env() == :prod,
@@ -33,10 +33,10 @@ defmodule Numerator.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:excoveralls, "~> 0.10", only: :test},
-      {:stream_data, "~> 0.1", only: :test},
-      {:dialyxir, "~> 1.0-rc", only: [:dev, :test], runtime: false},
-      {:ex_doc, "~> 0.21", only: :dev, runtime: false},
+      {:excoveralls, "~> 0.18", only: :test},
+      {:stream_data, "~> 0.5", only: :test},
+      {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
+      {:ex_doc, "~> 0.31", only: :dev, runtime: false},
       {:benchee, "~> 1.0", only: :dev}
     ]
   end
@@ -54,7 +54,7 @@ defmodule Numerator.MixProject do
   defp package() do
     [
       licenses: ["Apache-2.0"],
-      links: %{"GitHub" => "https://github.com/madeitGmbH/numerator"}
+      links: %{"GitHub" => "https://github.com/Kurisu3/numerator"}
     ]
   end
 end
