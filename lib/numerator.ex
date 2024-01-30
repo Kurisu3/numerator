@@ -168,6 +168,10 @@ defmodule Numerator do
     }
   end
 
+  # This clause is useful when more verbose key names are prefered to avoid possible naming conflicts ...
+  defp prepare_data(%{page: page, page_size: size, total_count: total}),
+    do: prepare_data(%{page: page, size: size, total: total})
+
   defp prepare_data(%{page: page, size: size, total: total}) do
     prepare_data(%{page: page, last: div(total, size) + 1})
   end
